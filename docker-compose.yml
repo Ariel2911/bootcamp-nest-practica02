@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  product_practica:
+    image: mongo
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo-product_practica:/data/db
+volumes:
+  mongo-product_practica:
